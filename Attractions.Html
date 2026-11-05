@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Sets the character encoding and makes the website responsive-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links the external css and Javascript files-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Sets the website title shown in the browser tab-->
+    <title> Discover Brunei Darussalam </title>
+</head>
+
+<body>
+
+    <!--Header containing the website title and navigation menu -->
+    <header>
+        <h1>Welcome to the main page of Brunei Darussalam</h1>
+
+        <nav>
+            <!--Button used to open and close the mobile navigation menu -->
+            <button class="menu-toggle" id="menuToggle" aria-label="open navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <!--Navigation links to the five main website pages-->
+            <ul id="navLinks">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="Discover-Brunei.Html">Discover Brunei</a> </li>
+                <li> <a href="Attractions.Html">Key Attractions</a> </li>
+                <li> <a href="Planning-Visits.Html">Planning Visits</a> </li>
+                <li> <a href="Contacts.Html">Contacts</a> </li>
+            </ul>
+        </nav>
+
+        <!--Button used to switch between dark and light mode-->
+        <button id="themeToggle" class="theme-toggle">
+            Dark Mode
+        </button>
+    </header>
+
+    <!--Main section containing information about tourist attraction-->
+    <main>
+        <!--Hero section introducing the tourist atrractions -->
+        <section class="hero">
+            <img src="images/Tourist-Attraction2.png" alt="Sultan omar Mosque">
+            <h2>Tourist Attractions</h2>
+            <p>Explore famous destinations in Brunei</p>
+        </section>
+
+        <section>
+            <h2>Here are some famous attractions that many people love to visit</h2>
+        </section>
+
+        <!--Container organising the tourist atrraction cards into a grid-->
+        <div class="Attraction-card-container ">
+            <!--card introducing Sultan Omar Ali Saifuddien Mosuqe-->
+            <article class="card">
+                <img class="gallery-image" src="images/Sultan-Omar-Mosque.jpeg" alt="Sultan omar Mosque">
+                <h3>Sultan Omar Ali Saifuddien Mosque</h3>
+                <p>Visitors often come here to see the beautiful arcitecture</p>
+            </article>
+
+            <!--Card Introducing Kampong Ayer-->
+            <article class="card">
+                <img class="gallery-image" src="images/Kampong-Ayer.jpeg" alt="Kampong Ayer">
+                <h3>Kampong Ayer</h3>
+                <p>Explore the amazing water village and meet the communities</p>
+            </article>
+
+            <!--Card introducing Ulu Temburong-->
+            <article class="card">
+                <img class="gallery-image" src="images/Ulu-Temburong3.jpeg" alt="Ulu Temburong National Park">
+                <h3>Ulu Temburong National Park</h3>
+                <p>Discover Brunei's Tropical Rainforests and see different animals</p>
+            </article>
+
+            <!--Card introducing Jerudong Park-->
+            <article class="card">
+                <img class="gallery-image" src="images/Jerudong-park.jpeg" alt="Jerudong Park">
+                <h3>Jerudong Park</h3>
+                <p>Having fun with families and go on different rides</p>
+            </article>
+        </div>
+
+        <!--External links providing additional information about Brunei -->
+        <section class="external-links">
+            <h2> Explore More Atrractions</h2>
+
+            <p>want to discover more places in Brunei?
+                Visit the offcial Brunei Tourism Website for more information </p>
+
+            <a href="https://www.bruneitourism.com/" target="_blank" rel="noopener noreferrer">
+                Visit Brunei Tourism
+            </a>
+        </section>
+
+    </main>
+
+    <!--footer displaying the tourism information-->
+    <Footer>
+        <p>The ministry of Tourism, Brunei Darussalam</p>
+    </Footer>
+
+    <!--Image popup used to display gallery images when clicked-->
+    <div id="imagePopup" class="image-popup" aria-hidden="true">
+        <!--Button used to close the image popup-->
+        <button id="closePopup" class="close-popup" aria-label="Close image">
+            &times;
+        </button>
+
+        <!--Image and caption displayed inside the popup-->
+        <img id="popupImage" src="images/Sultan-Omar-Mosque.jpeg" alt="Sultan omar Mosque">
+        <p id="popupCaption"></p>
+    </div>
+
+
+</body>
+
+</html>

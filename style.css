@@ -1,0 +1,498 @@
+/*Applies border-size sizing to all elements*/
+* {
+    box-sizing: border-box;
+}
+/*Sets the general font,background,text color and page layout*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    Line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Styles the website header*/
+header {
+    background-color: #F1E8D8;
+    color: #547C78;
+    text-align: center;
+    padding: 18px 20px;
+}
+/* Controls the appearance of the main heading*/
+header h1 {
+    margin-top: 0;
+    font-size: 28px;
+
+}
+/*Arranges the navigation links into a horizontal layout*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/*Styles the navigation Links*/
+nav a {
+    display: inline-block;
+    color: #547C78;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+/*Changes the navigation link appearance when hovered or focused*/
+nav a:hover,
+nav a:focus-visible {
+    background-color: #547c78;
+    color: white;
+}
+/*Highlights the navigation links for the current page*/
+nav a[aria-current="page"] {
+    text-underline-offset: 5px;
+}
+/* Sets the maximum width and spcaing for the main content*/
+main,
+.main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+/* Adds spacing between website section*/
+section {
+    margin-bottom: 30px;
+}
+/*Centres the section headings*/
+section h2 {
+    text-align: center;
+}
+/*Creates the main banner section with a background image*/
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+/* Makes the hero image fill its container*/
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Adds a dark background behind the hero text for the readability*/
+.hero h2,
+.hero p {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 16px;
+}
+/*Styles the heading section at the top of the indiviudal pages*/
+.page-heading {
+    background-color: #e8f2e8;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 12px;
+
+}
+/*Ensures image inside the page headings fit their container*/
+.page-heading img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/*Arranges the homepage cards into thress colmuns*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    transition: transform 0.3s;
+}
+/*Arranges the Discover Brunei cards into three columns*/
+.Discover-Brunei-Container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    transition: transform 0.3s;
+    align-content: center;
+}
+/*Arranges the tourist attraction cards into two columns*/
+.Attraction-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+/*Arranges the planning information cards into three columns*/
+.Plan-Visit-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+}
+/* Styles the individual information*/
+.card {
+    background-color: #f2f5f2;
+    padding: 18px;
+    border-radius: 1px;
+    border: 1px solid #d5e0d5;
+    min-width: 0;
+}
+/*Controls the size and appearance of the images inside cards*/
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 15px;
+}
+/*Styles the card headings*/
+.card h2 {
+    font-size: 22px;
+    margin-top: 5px;
+}
+/*Styles the card description*/
+.card p {
+    font-size: 16px;
+}
+/*Sets the general appearance of buttons and button links*/
+button,
+.btn {
+    background-color: #164b35;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+}
+/* Changes button colors when hovered*/
+button:hover,
+.btn:hover {
+    background-color: #286a4d;
+}
+/*Adds a visible outline when users navigate with a keyboard*/
+button:focus-visible,
+a:focus-visible,
+input:focus-visible select:focus-visible {
+    outline: 3px solid #b17b12;
+    outline-offset: 3px;
+}
+/*Changes the appearance of an active filter button*/
+.filter-btn[aria-pressed="true"] {
+    background-color: #765000;
+    color: white;
+}
+/*Styles the Contact form container*/
+.form-section {
+    background-color: #f2f5f2;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+/*Styles the heading inside the contact form*/
+.form-section h2 {
+    font-size: 26px;
+}
+/*Arranges the form fields vertically*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/*Styles the text fields,dropdowns and message area*/
+input,
+select,
+textarea {
+    padding: 11px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    font: inherit;
+    width: 100%;
+}
+/*Allows visitors to resize the message area vertically*/
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+/* Aligns the form submission button to the left*/
+form button {
+    align-self: flex-start;
+}
+/*Styles the external Links section*/
+.external-links a {
+    color: #164b35
+}
+/*Styles the website footer*/
+footer {
+    background-color: #164b35;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: auto;
+}
+/*Adjust the card layout and hero section for the tablet screens*/
+@media (max-width:800px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0,
+                    1fr));
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .form-section {
+        max-width: 100%;
+    }
+}
+/*Adjust the website layout for smaller mobile screens*/
+@media (max-width:600px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 7px 12px;
+    }
+
+    main,
+    .main {
+        padding: 15px;
+    }
+
+    .card-container,
+    .Discover-Brunei-Container,
+    .Plan-Visit-container,
+    .Attraction-card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .hero {
+        min-height: 280px;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .page-heading {
+        padding: 20px 15px;
+    }
+
+    .form-section {
+        padding: 20px 15px;
+    }
+
+    .form-section h2 {
+        font-size: 23px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+}
+/*Hides the hamburger menu on the desktop screens*/
+.menu-toggle {
+    display: none;
+}
+/*Displays the hamburger menu and collapsible navigation on mobile*/
+@media(max-width:600px) {
+    .menu-toggle {
+        display: block;
+        margin: 10px auto;
+        font-size: 25px;
+        background-color: #547c78;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+/*Applies dark theme colors to the website*/
+body.dark-mode {
+    background-color: #222222;
+    color: #f5f5f5;
+}
+/* Changes the header appearance in dark mode*/
+body.dark-mode header {
+    background-color: #333333;
+    color: white;
+}
+/*Changes navigation Link colors in dark mode*/
+body.dark-mode nav a {
+    color: white;
+}
+/*Changes card and form colors in dark mode*/
+body.dark-mode .card,
+body.dark-mode .page-heading,
+body.dark-mode .form-section {
+    background-color: #333333;
+    color: white;
+    border-color: #555555;
+}
+/*Chnages form field colors in dark mode*/
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #333333;
+    color: white;
+    border-color: #777777;
+}
+/*Positions the dark mode toggle button*/
+.theme-toggle {
+    display: block;
+    margin: 10px 0 10px auto;
+}
+/*Makes gallery images appear clickable*/
+.gallery-image {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+/*Adds a slight zoom effect when hovering over the gallery images*/
+.gallery-image:hover {
+    transform: scale(1.03);
+}
+/*Creates the fullscreen image popup overlay*/
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+/*Displays the popup when it is activated*/
+    .image-popup.active {
+        display: flex;
+    }
+/*Controls the size of the image inside the popup*/
+    .image-popup img {
+        max-width: 90%;
+        max-height: 75vh;
+        object-fit: contain;
+    }
+/*Styles the image caption*/
+    .image-popup p {
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+    }
+/*Positions and styles the popup close button*/
+.close-popup{
+    position:absolute;
+    top:20px;
+    right: 25px;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border:none;
+    cursor: pointer;
+}
+/*Creates a seperate section for useful external websites*/
+.external-links {
+    background-color: #f2f5f2;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 10px;
+    border:1px solid #d5e0d5;
+    text-align: center;
+}
+/*Styles the heading inside the external links section*/
+.external-links h2{
+    color:#164b35;
+    margin-bottom: 10px;
+}
+/*Styles the description inside the external links section*/
+.external-links p {
+    color:#222222;
+    margin-bottom: 15px;
+}
+/*Styles external website links like button*/
+.external-links a {
+    display: inline-block;
+    background-color: #164b35;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+/*Changes the external link appearance when hovered*/
+.external-links a:hover {
+ background-color: #547C78;
+ text-decoration: underline;
+}
+/*Adds a visible outline when external link receives keyboard focus*/
+.external-links a:focus-visible{
+    outline:3px solid #b17b12;
+    outline-offset: 4px;
+}

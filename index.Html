@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Sets the character encoding and makes the website responsive-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links the external css and Javascript files-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Sets the website title in the Browser tab-->
+    <title> Discover Brunei Darussalam </title>
+</head>
+
+<body>
+
+    <!--Header containing the website title and navigation menu-->
+    <header>
+        <h1>Welcome to the main page of Brunei Darussalam</h1>
+
+        <!--Button used to Open and close the Mobile navigation-->
+        <nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="open navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+            <!--Navigation links to the five main website pages-->
+            <ul id="navLinks">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="Discover-Brunei.Html">Discover Brunei</a> </li>
+                <li> <a href="Attractions.Html">Key Attractions</a> </li>
+                <li> <a href="Planning-Visits.Html">Planning Visits</a> </li>
+                <li> <a href="Contacts.Html">Contacts</a> </li>
+            </ul>
+        </nav>
+        <!--Button used to switch between dark and light mode-->
+        <button id="themeToggle" class="theme-toggle">
+            Dark Mode
+        </button>
+    </header>
+
+    <!--Main section containing the homepage content-->
+    <main>
+
+        <!--Hero section displaying the main image and welcome message-->
+        <section class="hero">
+            <img src="images/Main-hero-page3.png" alt="Sultan Omar Ali Saifuddien Mosque">
+            <h2>Welcome to Brunei Darussalam!</h2>
+            <p>
+                Discover the beauty and amazing region with unexpected hidden treasures in the abode of peace.
+            </p>
+        </section>
+
+        <!--Explore section displaying three topics in Brunei-->
+        <section>
+            <h2>Explore Brunei</h2>
+
+<!--Card Container organising the images and information-->
+            <div class="card-container">
+                <!--Card introducing Brunei's Culture-->
+                <article class="card">
+                    <img class="gallery-image" src="images/Tradition2.jpeg" alt="Culture">
+                    <h3>Culture</h3>
+                    <p>Discover Brunei's tradition and learn their history</p>
+                </article>
+
+<!--Card introducing Brunei's Natural Environment-->
+                <article class="card">
+                    <img class="gallery-image" src="images/Nature.jpeg" alt="Nature">
+                    <h3>Nature</h3>
+                    <p>Explore the rainforest and see proboscis monkey</p>
+                </article>
+
+<!--Card introducing popular tourist attractions-->
+                <article class="card">
+                    <img class="gallery-image" src="images/Attractions2.jpeg" alt="Attraction">
+                    <h3>Attractions</h3>
+                    <p>Go to different places that are well known in the country</p>
+                </article>
+            </div>
+
+
+        </section>
+
+    </main>
+
+<!--footer displaying the tourism information-->
+    <Footer>
+        <p>The ministry of Tourism, Brunei Darussalam</p>
+    </Footer>
+
+    <!--Image popup used to display gallery images when clicked-->
+    <div id="imagePopup" class="image-popup" aria-hidden="true">
+        <!--Button used to close the image popup-->
+        <button id="closePopup" class="close-popup" aria-label="Close image">
+            &times;
+        </button>
+
+        <!--Image and caption displayed inside the popup-->
+        <img id="popupImage" src="images/Tradition2.jpeg" alt="Tradiyional Brunei Culture">
+        <p id="popupCaption"></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Sets the character encoding and makes the website responsive-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links the external css and Javascript files-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Sets the website title shown in the browser tab-->
+    <title> Discover Brunei Darussalam </title>
+</head>
+
+<body>
+
+    <!--Header containing the website title and navigation menu -->
+    <header>
+        <h1>Welcome to the main page of Brunei Darussalam</h1>
+
+        <nav>
+            <!--Button used to open and close the mobile navigation menu -->
+            <button class="menu-toggle" id="menuToggle" aria-label="open navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <!--Navigation links to the five main website pages-->
+            <ul id="navLinks">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="Discover-Brunei.Html">Discover Brunei</a> </li>
+                <li> <a href="Attractions.Html">Key Attractions</a> </li>
+                <li> <a href="Planning-Visits.Html">Planning Visits</a> </li>
+                <li> <a href="Contacts.Html">Contacts</a> </li>
+            </ul>
+        </nav>
+
+        <!--Button used to switch between dark and light mode-->
+        <button id="themeToggle" class="theme-toggle">
+            Dark Mode
+        </button>
+    </header>
+
+    <!--Main section containing the contact information and form-->
+    <main>
+        <section class="page-heading">
+            <h2>Contact us</h2>
+            <p>We would love to hear your thaughts regarding in visiting our country</p>
+        </section>
+
+                    <!--Section containing the contact form-->
+        <section class="form-section">
+            <h2>Send a Message</h2>
+
+              <!--Form allowing visitors to enter and submit their details-->
+            <form id="Contact-Form">
+              
+                <!--Input field for the visior's name-->
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+
+                <!--Input field for the visitor's email address-->
+                <label for="email">Your email</label>
+                <input type="email" id="email" required>
+
+                <!--Text area allowing visitors to write a longer message-->
+                <label for="messages">Your messages</label>
+                <textarea id="messages" name="messages" rows="5" required></textarea>
+
+                <!--button used to submit the Contact form-->
+                <button type="submit">send message</button>
+            </form>
+        </section>
+    </main>
+<!--Footer displaying the tourism infomration-->
+    <footer>
+        <p>The ministry of Tourism, Brunei Darussalam</p>
+    </footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Sets the character encoding and makes the website responsive-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links the external css and Javascript files-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Sets the website title shown in the browser tab-->
+    <title> Discover Brunei Darussalam </title>
+</head>
+
+<body>
+
+    <!--Header containing the website title and navigation menu -->
+    <header>
+        <h1>Welcome to the main page of Brunei Darussalam</h1>
+
+        <nav>
+            <!--Button used to open and close the mobile navigation menu -->
+            <button class="menu-toggle" id="menuToggle" aria-label="open navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <!--Navigation links to the five main website pages-->
+            <ul id="navLinks">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="Discover-Brunei.Html">Discover Brunei</a> </li>
+                <li> <a href="Attractions.Html">Key Attractions</a> </li>
+                <li> <a href="Planning-Visits.Html">Planning Visits</a> </li>
+                <li> <a href="Contacts.Html">Contacts</a> </li>
+            </ul>
+        </nav>
+
+        <!--Button used to switch between dark and light mode-->
+        <button id="themeToggle" class="theme-toggle">
+            Dark Mode
+        </button>
+    </header>
+
+    <!--Main section containing information about Brunei-->
+    <main class="main">
+
+        <!--Hero section introducing the Discover Brunei page-->
+        <section class="hero">
+            <img src="images/Culture-and-tradition2.png" alt="Culture and tradition">
+            <h2>Discover Brunei</h2>
+            <p>Explore the culture,traditions and the history of Brunei Darussalam</p>
+        </section>
+
+        <!--Heading introducing the culture and heritage-->
+        <section>
+            <h2>Discover Brunei's Culture and heritage</h2>
+        </section>
+
+        <!--Container organising the information cards into a grid-->
+        <div class="Discover-Brunei-Container">
+
+            <!--card providing information about Brunei's culture-->
+            <article class="card">
+                <img class="gallery-image" src="images/Tradition.jpeg" alt="The Culture">
+                <h2>The Culture</h2>
+                <p>
+                    Brunei is known as a Malay culture region that has
+                    warm hospitality towards others as well as kindly introducing
+                    their traditional customs, Tourist will feel more
+                    welcoming experience with locals, celeberations and get to eat unqiue dishes
+                    served to them.
+                </p>
+            </article>
+            <!--Card explaining the history of Brunei-->
+            <article class="card">
+                <img class="gallery-image" src="images/History.jpeg" alt="The history of Brunei">
+                <h2>The history of Brunei</h2>
+                <p>
+                    The long history of Brunei started as a Malay sultnate.
+                    Visitors today are able to learn about this by visiting
+                    the museums and hitorical landmarks.
+                </p>
+            </article>
+
+            <!--Card introducing the local lifestyle in Kampong Ayer-->
+            <article class="card">
+                <img class="gallery-image" src="images/Kampong-ayer4.jpeg" alt="Local Lifestyle">
+                <h2>Local Lifestyle</h2>
+                <p>One of the most interesting places to visit is the kampong ayer(Water Village)
+                    which today still has communities of people living there as their houses and
+                    schools are built on stilts above the Brunei River.
+                </p>
+            </article>
+
+            <!--Card introducing the National day of Brunei-->
+            <article class="card">
+                <img class="gallery-image" src="images/National-Day.png" alt="National-Day">
+                <h2>Brunei National Day</h2>
+                <p>Brunei celebrates National day every year on the 23rd of February to commemorate the country's
+                    independence from the british protection in 1984.
+                </p>
+            </article>
+
+            <!--Card introducing Sultan's birthday-->
+            <article class="card">
+                <img class="gallery-image" src="images/Sultan's Birthday.png" alt="Sultan Haji Hassanal Birthday">
+                <h2>Sultan Haji Hassanal Bolkiah's birthday</h2>
+                <p>His Majesty Sultan Haji Hassanal Bolkiah's birthday is celeberated on the 15th of July every year
+                    as this occasion is marked with royal ceremonies, parades,performances and public celeberations.
+            </article>
+
+            <!--Card introducing Hari Raya Aidilfitri-->
+            <article class="card">
+                <img class="gallery-image" src="images/HariRaya.jpeg" alt="Hari Raya celeberation">
+                <h2>Hari Raya celeberations</h2>
+                <p>Hari Raya Aidilfitri is major celebartion around the country as it marks the end of Ramadhan,the
+                    Islamic
+                    holy month of fasting. 
+                </p>
+            </article>
+        </div>
+        <!--External links providing additional information about Brunei -->
+        <section class="external-links">
+            <h2> Learn More About Brunei's Culture</h2>
+
+            <p>Discover more about Brunei's cultural heritage,
+                youth development and community activities.
+            </p>
+
+            <a href="https://www.kkbs.gov.bn/" target="_blank" rel="noopener noreferrer">
+                Visit Ministry of Culture, youth and Sports
+            </a>
+        </section>
+    </main>
+
+    <!--footer displaying the tourism information-->
+    <Footer>
+        <p>The ministry of Tourism, Brunei Darussalam</p>
+    </Footer>
+
+    <!--Image popup used to display gallery images when clicked-->
+    <div id="imagePopup" class="image-popup" aria-hidden="true">
+        <!--Button used to close the image popup-->
+        <button id="closePopup" class="close-popup" aria-label="Close image">
+            &times;
+        </button>
+
+        <!--Image and caption displayed inside the popup-->
+        <img id="popupImage" src="images/Culture-and-tradition.jpeg" alt="Brunei Culture and Tradition">
+        <p id="popupCaption"></p>
+    </div>
+
+</body>
+
+</html>

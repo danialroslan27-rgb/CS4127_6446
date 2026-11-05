@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Sets the character encoding and makes the website responsive-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links the external css and Javascript files-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!--Sets the website title shown in the browser tab-->
+    <title> Discover Brunei Darussalam </title>
+</head>
+
+<body>
+
+    <!--Header containing the website title and navigation menu -->
+    <header>
+        <h1>Welcome to the main page of Brunei Darussalam</h1>
+
+        <nav>
+            <!--Button used to open and close the mobile navigation menu -->
+            <button class="menu-toggle" id="menuToggle" aria-label="open navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <!--Navigation links to the five main website pages-->
+            <ul id="navLinks">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="Discover-Brunei.Html">Discover Brunei</a> </li>
+                <li> <a href="Attractions.Html">Key Attractions</a> </li>
+                <li> <a href="Planning-Visits.Html">Planning Visits</a> </li>
+                <li> <a href="Contacts.Html">Contacts</a> </li>
+            </ul>
+        </nav>
+
+        <!--Button used to switch between dark and light mode-->
+        <button id="themeToggle" class="theme-toggle">
+            Dark Mode
+        </button>
+    </header>
+
+    <!--Page heading introducing the plannings section-->
+    <main>
+        <!--Page heading introducing the travel planning section-->
+        <section class="page-heading">
+            <h2>Plan your visits</h2>
+            <p>Useful information for your trip to Brunei</p>
+        </section>
+
+        <!--Heading introducing the travel information cards-->
+        <section>
+            <h2>Useful Information for Planning Your Visit</h2>
+        </section>
+
+        <!--Container organising the travel information cards into a grid-->
+        <div class="Plan-Visit-container">
+            <!--Card providing information about travelling to Brunei-->
+            <article class="card">
+                <h2>Getting Here</h2>
+                <img class="gallery-image" src="images/Aeroplane.jpeg" alt="Getting Here">
+                <p>
+                    Visitors can travel to Brunei by plane through international airports
+                </p>
+            </article>
+
+            <!--Card explainibg available transport options-->
+            <article class="card">
+                <h2>Transport</h2>
+                <img class="gallery-image" src="images/Transportation.png" alt="Transport">
+                <p>Tourist may able to go to different places using buses, taxis or car rental services</p>
+            </article>
+
+            <!--Card introducing traditional  Burneian Food-->
+            <article class="card">
+                <h2>Local Food</h2>
+                <img class="gallery-image" src="images/Traditional-dish.jpeg" alt="Local Food">
+                <p>Try Traditional dishes such as Ambuyat or eat Nasi Katok during your stay</p>
+            </article>
+        </div>
+
+        <!--External links providing additional information about Brunei -->
+        <section class="external-links">
+            <h2> Useful Government information</h2>
+
+            <p>Visit the official government portal to find useful information and public services.
+            </p>
+
+            <a href="https://www.gov.bn/" target="_blank" rel="noopener noreferrer">
+                Visit the offcial Government Website of Brunei
+            </a>
+        </section>
+    </main>
+
+    <!--footer displaying the tourism information-->
+    <Footer>
+        <p>The ministry of Tourism, Brunei Darussalam</p>
+    </Footer>
+
+
+    <!--Image popup used to display gallery images when clicked-->
+</body>
+<div id="imagePopup" class="image-popup" aria-hidden="true">
+    <!--Button used to close the image popup-->
+    <button id="closePopup" class="close-popup" aria-label="Close image">
+        &times;
+    </button>
+
+    <!--Image and caption displayed inside the popup-->
+    <img id="popupImage" src="images/Aeroplane.jpeg" alt="Getting Here">
+    <p id="popupCaption"></p>
+</div>
+
+</html>
